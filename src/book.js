@@ -1,6 +1,7 @@
-function createTitle() {
-  
-}
+
+function createTitle(bookIdea) {
+  return 'The ' + bookIdea
+};
 
 module.exports = {
   createTitle,
