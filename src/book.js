@@ -22,23 +22,24 @@ function saveReview(addString,reviews) {
 };
 
 function calculatePageCount(createTitle) {
-return createTitle.toString().length*20
+return (createTitle.length*20)
 };
 
 
-function writeBook(a,b,c) {
-  var book = [
-    {
-    title: createTitle(),
-    mainCharacter: buildMainCharacter(),
-    pageCount: calculatePageCount(),
-    genre: 'fantasy',
-    }
-  ]
-  return book
+function writeBook(bookTitle,bookCharacter,genre) {
+  var book = {
+    title: bookTitle,
+    mainCharacter: bookCharacter,
+    pageCount: bookTitle.length*20,
+    genre:genre,
+      }
+  return book;
+    };
+
+
+function editBook(book) {
+return book.pageCount = book.pageCount*.75
 };
-
-
 
 module.exports = {
   createTitle,
@@ -46,5 +47,5 @@ module.exports = {
   saveReview,
   calculatePageCount,
   writeBook,
-  // editBook
+  editBook
 }
