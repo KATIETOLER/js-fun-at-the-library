@@ -17,24 +17,27 @@ for(var i=0; i < shelfName.length; i++) {
 };
 
 
-function listTitles(shelf) {
+function listTitles(shelfName) {
 var list = [];
-for(var i = 0; i < shelf.length; i++) {
-  list.push(shelf[i].title);
+for(var i = 0; i < shelfName.length; i++) {
+  list.push(shelfName[i].title);
   //pushes the string inside the shelf at the index of title
   }
 return list.join(', ')
 //returns string joined together with the ', ' inbetween
 };
 
-searchShelf(shelfName, bookName) {
-  if (on shelf) {
-return true;
+function searchShelf(shelfName, bookName) {
+  for(var i = 0; i < shelfName.length; i++) {
+  //function shelfName, bookName parameters
+  if (shelfName[i].title === bookName) {
+    //if shelfName is strictly equal to shelfName at the index of title
+      return true;
+//return true, otherwise, the title is not on the shelf and return false
   }
-  else {
+    }
     return false;
-  }
-};
+  };
 
 module.exports = {
 shelfBook,
